@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Foodpanda</title>
+
+    <style>
+        header {
+
+            height: 110px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 120px;
+            background-color: white;
+        }
+
+        header>img {
+            height: 150px;
+            width: 170px;
+            z-index: -1;
+            margin-left: 40px;
+            margin-top: 40px;
+        }
+
+        .b1 {
+            height: 50px;
+            width: 90px;
+            background-color: white;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: black;
+            border-radius: 8px;
+            margin-right: -120px;
+        }
+
+        .b2 {
+            height: 45px;
+            width: 220px;
+            background-color: rgb(231, 45, 85);
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 0;
+            color: white;
+            border-radius: 7px;
+            margin-right: 70px;
+
+        }
+
+        header>span {
+            margin-left: -190px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+
+        .h {
+            background-color: rgb(231, 45, 85);
+            height: 120px;
+            width: 100%;
+            color: white;
+            font-size: 7.5rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+
+        }
+
+        body {
+            margin: 0;
+            overflow: scroll;
+        }
+
+        .head2 {
+            height: 150px;
+            width: 20%;
+            background-color: white;
+            margin-top: 30px;
+            position: fixed;
+            top: 200px;
+
+
+        }
+        .head2>ul{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-left: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-items: flex-start;
+            align-items: flex-end;
+            margin-left: 10px;
+        }
+
+        li {
+            margin-left: 50px;
+            font-size: 1.3rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            transition: color 0.5s;
+            border-bottom: 4px solid rgb(218, 41, 70);
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        li:hover {
+            color: rgb(218, 33, 64);
+
+
+
+        }
+
+        .left {
+            height: 55%;
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 4px;
+            background-color: rgb(248, 248, 248);
+            position: fixed;
+            top: 300px;
+            border-radius: 9px;
+            overflow: scroll;
+
+
+
+        }
+
+        .sec1 {
+            display: flex;
+            flex-direction: column;
+            margin-left: 3px;
+        }
+
+        .sec1>p {
+            font-size: 1.2rem;
+            margin-left: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        input[type="radio"] {
+            transform: scale(1.5);
+            vertical-align: middle;
+
+        }
+
+        label {
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .sec2 {
+            display: flex;
+            flex-direction: column;
+            margin-left: 3px;
+        }
+
+        .sec2>p {
+            font-size: 1.2rem;
+            margin-left: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            vertical-align: middle;
+        }
+
+        .sec3 {
+            margin-left: 3px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sec3>p {
+            font-size: 1.2rem;
+            margin-left: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+        }
+
+        .left>h2 {
+            font-size: 1.7rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input[type="search"] {
+            height: 50px;
+            width: 290px;
+            margin-bottom: 10px;
+            border: 0;
+            border-radius: 12px;
+        }
+
+        .right {
+            height: 100%;
+            width: 75%;
+            margin-left: 20px;
+            margin-left: 400px;
+            margin-top: 400px;
+            overflow: scroll;
+        }
+
+        input[type="text"] {
+            height: 80px;
+            width: 800px;
+            margin-left: 30px;
+            font-size: 1.5rem;
+            padding-left: 20px;
+            border: 1px solid black;
+            border-radius: 12px;
+        }
+
+        .main {
+            display: flex;
+
+        }
+
+        .s1 {
+            height: 200px;
+            width: 900px;
+            background-color: pink;
+            border-radius: 14px;
+        }
+
+        .s1>img {
+            height: 180px;
+            width: 300px;
+            margin-top: -90px;
+            margin-left: 420px;
+        }
+
+        .s1>h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 10px;
+            margin-bottom: -10px;
+        }
+
+        .s1>button {
+            height: 40px;
+            width: 120px;
+            margin-left: 10px;
+            background-color: rgb(228, 32, 64);
+            border: 1px solid white;
+            border-radius: 12px;
+            color: white;
+
+
+        }
+
+        .food {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .food>img {
+            height: 120px;
+            width: 180px;
+            border-radius: 5px;
+
+        }
+
+        .text>ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: -10px;
+            margin-right: 10px;
+        }
+
+        .last {
+            margin-top: 20px;
+        }
+
+        .last>h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h">FoodPanda</div>
+
+    <header>
+        <img src="https://images.seeklogo.com/logo-png/40/1/foodpanda-logo-png_seeklogo-409598.png" alt="">
+        <i class="fa-solid fa-location-dot fa-2xl"></i><span>New address service road W islamabad</span>
+        <button class="b1">Log in</button>
+        <button class="b2">Sign up for free delivery</button>
+
+
+    </header>
+    <div class="head2">
+        <ul>
+            <li>Delievery</li>
+            <li>Pickup</li>
+            <li>pandamart</li>
+            
+            
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="left">
+            <h2>Filters</h2>
+
+            <div class="sec1">
+                <p>sort by</p>
+                <input type="radio" name="a" value="Relevance"><label for="a">Relevance</label>
+                <input type="radio" name="a" value="Fastest delivery"><label for="b">Fastest delivery</label>
+                <input type="radio" name="a" value="2"><label for="c">Distance</label>
+                <input type="radio" name="a" value="1"><label for="d">Top rated</label>
+            </div>
+            <div class="sec2">
+                <p>offers</p>
+                <input type="checkbox" name="offers">Free delivery
+                <input type="checkbox" name="offers">Accepts vouchers
+                <input type="checkbox" name="offers">Deals
+            </div>
+            <div class="sec3">
+                <p>cuisines</p>
+                <input type="search" name="search" placeholder="Search for cuisine">
+                <input type="checkbox" name="cuisines">American
+                <input type="checkbox" name="cuisines">BBQ
+                <input type="checkbox" name="cuisines">Beverages
+                <input type="checkbox" name="cuisines">Biryani
+                <input type="checkbox" name="cuisines">Broast
+                <input type="checkbox" name="cuisines">Burgers
+                <input type="checkbox" name="cuisines">Chinese
+                <input type="checkbox" name="cuisines">Continental
+                <input type="checkbox" name="cuisines">Desserts
+            </div>
+        </div>
+
+        <div class="right">
+            <input type="text" placeholder="Search for restaurants,cuisines and dishes">
+
+            <div class="s1">
+                <h1>Sign up for free delivery on <br> your first order</h1>
+                <button>sign up</button>
+                <img src="https://images.deliveryhero.io/image/foodpanda/web-acquisition/fp/rlp-nc-banner-logo.webp"
+                    alt="">
+            </div>
+
+
+            <div class="s2">
+                <h1>Cuisines for you</h1>
+                <div class="food">
+
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D&fm=jpg&q=60&w=3000"
+                        alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJAfR9wbV4OesvKLmaJFlhWLa4hav4lJ3dpA&s"
+                        alt="">
+                    <img src="https://thumbs.dreamstime.com/b/unhealthy-fast-food-delivery-menu-featuring-assorted-burgers-cheeseburgers-nuggets-french-fries-soda-high-calorie-low-356045884.jpg"
+                        alt="">
+                    <img src="https://media.gettyimages.com/id/1316145932/photo/table-top-view-of-spicy-food.jpg?s=612x612&w=gi&k=20&c=f-hk_ABcJZiEDNxUfAq-Tqxg0kdE01MbMWkBXhBobl0="
+                        alt="">
+                    <img src="https://media.istockphoto.com/id/1829241109/photo/enjoying-a-brunch-together.jpg?s=612x612&w=0&k=20&c=9awLLRMBLeiYsrXrkgzkoscVU_3RoVwl_HA-OT-srjQ="
+                        alt="">
+
+                </div>
+                <div class="text">
+                    <ul>
+                        <li>Pizza</li>
+                        <li>Bueger</li>
+                        <li>Fastfood</li>
+                        <li>Western</li>
+                        <li>American</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="last">
+                <h1>Food delivery in Islamabad has never been easier</h1>
+                <p>Pakistan's capital and a pulsating, energetic and cosmopolitan city, Islamabad enjoys a multicultural
+                    and
+                    diverse food scene. Thanks to its rapid urbanisation, you can find numerous international chains as
+                    well
+                    as incredibly popular local and traditional establishments, offering nearly unlimited cuisine
+                    options
+                    when it comes to dining out. What's even more exciting, food delivery in Islamabad is now made
+                    super-easy and convenient. Reason? foodpanda serves across the length and breadth of this largest
+                    city
+                    of Pakistan, enabling easy delivery from restaurants in Islamabad.</p>
+                <br><br>
+
+                <h1>Islamabad food delivery is just what modern fast-paced lifestyles need</h1>
+                <p>Aside from health reasons, savouring great food could be a wonderful stress-buster! Especially in a
+                    thriving metropolis like Islamabad, you would be leading a very busy lifestyle where food always
+                    takes a backseat. Late to the office? No time to prepare food for lunch? Lazy to get up on a Sunday
+                    morning? Well, these are just a few of the everyday scenarios where you are most likely going to
+                    skip your meals. With food delivery in Islamabad, you never have to forgo your food. With our online
+                    portal and mobile app, you can quickly choose from hundreds and hundreds of restaurants, cafes, and
+                    takeaways in your city and get satisfying, healthy and delicious food right at your doorstep!</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
