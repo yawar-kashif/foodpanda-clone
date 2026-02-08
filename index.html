@@ -81,19 +81,20 @@
         }
 
         .head2 {
-            height: 150px;
-            width: 20%;
+            height: 80px;
+            width: 100%;
             background-color: white;
-            margin-top: 30px;
-            position: fixed;
-            top: 200px;
+            /* margin-top: 30px; */ 
+             position: fixed;
+            top: 220px;
+            left:340px ;
 
 
         }
         .head2>ul{
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            /* justify-content: center;
+            align-items: flex-start; */
             margin-left: 50px;
         }
 
@@ -134,6 +135,7 @@
             top: 300px;
             border-radius: 9px;
             overflow: scroll;
+
 
 
 
@@ -299,6 +301,15 @@
             font-weight: bold;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
+        i{
+            margin-left: -55px;
+        }
+        header>span{
+            margin-left: -130px;
+        }
+        .content{
+            margin-left: 20px;
+        }
     </style>
 </head>
 
@@ -310,6 +321,7 @@
         <i class="fa-solid fa-location-dot fa-2xl"></i><span>New address service road W islamabad</span>
         <button class="b1">Log in</button>
         <button class="b2">Sign up for free delivery</button>
+        <a href="" target=""></a>
 
 
     </header>
@@ -318,6 +330,11 @@
             <li>Delievery</li>
             <li>Pickup</li>
             <li>pandamart</li>
+            <li>foodmart</li>
+            <li>Desi</li>
+            <li>online</li>
+            <li>order</li>
+            <li>American</li>
             
             
         </ul>
@@ -326,33 +343,36 @@
     <div class="main">
 
         <div class="left">
-            <h2>Filters</h2>
+            <div class="content">
 
-            <div class="sec1">
-                <p>sort by</p>
-                <input type="radio" name="a" value="Relevance"><label for="a">Relevance</label>
-                <input type="radio" name="a" value="Fastest delivery"><label for="b">Fastest delivery</label>
-                <input type="radio" name="a" value="2"><label for="c">Distance</label>
-                <input type="radio" name="a" value="1"><label for="d">Top rated</label>
-            </div>
-            <div class="sec2">
-                <p>offers</p>
-                <input type="checkbox" name="offers">Free delivery
-                <input type="checkbox" name="offers">Accepts vouchers
-                <input type="checkbox" name="offers">Deals
-            </div>
-            <div class="sec3">
-                <p>cuisines</p>
-                <input type="search" name="search" placeholder="Search for cuisine">
-                <input type="checkbox" name="cuisines">American
-                <input type="checkbox" name="cuisines">BBQ
-                <input type="checkbox" name="cuisines">Beverages
-                <input type="checkbox" name="cuisines">Biryani
-                <input type="checkbox" name="cuisines">Broast
-                <input type="checkbox" name="cuisines">Burgers
-                <input type="checkbox" name="cuisines">Chinese
-                <input type="checkbox" name="cuisines">Continental
-                <input type="checkbox" name="cuisines">Desserts
+                <h2>Filters</h2>
+                
+                <div class="sec1">
+                    <p>sort by</p>
+                    <input type="radio" name="a" value="Relevance"><label for="a">Relevance</label>
+                    <input type="radio" name="a" value="Fastest delivery"><label for="b">Fastest delivery</label>
+                    <input type="radio" name="a" value="2"><label for="c">Distance</label>
+                    <input type="radio" name="a" value="1"><label for="d">Top rated</label>
+                </div>
+                <div class="sec2">
+                    <p>offers</p>
+                    <input type="checkbox" name="offers">Free delivery
+                    <input type="checkbox" name="offers">Accepts vouchers
+                    <input type="checkbox" name="offers">Deals
+                </div>
+                <div class="sec3">
+                    <p>cuisines</p>
+                    <input type="search" name="search" placeholder="Search for cuisine">
+                    <input type="checkbox" name="cuisines">American
+                    <input type="checkbox" name="cuisines">BBQ
+                    <input type="checkbox" name="cuisines">Beverages
+                    <input type="checkbox" name="cuisines">Biryani
+                    <input type="checkbox" name="cuisines">Broast
+                    <input type="checkbox" name="cuisines">Burgers
+                    <input type="checkbox" name="cuisines">Chinese
+                    <input type="checkbox" name="cuisines">Continental
+                    <input type="checkbox" name="cuisines">Desserts
+                </div>
             </div>
         </div>
 
